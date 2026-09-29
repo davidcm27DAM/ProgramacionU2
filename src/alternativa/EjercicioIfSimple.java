@@ -13,8 +13,8 @@ public class EjercicioIfSimple {
         numero1 = teclado.nextFloat();
         System.out.println("Introduzca el segundo sumando: ");
         numero2 = teclado.nextFloat();
-        resultado = (float) numero1 + numero2;
-        if ((numero1 + numero2) > 5) {
+        resultado = numero1 + numero2;
+        if (resultado > 5) {
             System.out.println("Suma mayor a 5.");
 
         }
