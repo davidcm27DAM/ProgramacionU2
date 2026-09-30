@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class EstructuraIfCompuesta {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
+        final int VALOR = 5;
         float numero1;
         float numero2;
         float resultado;
@@ -14,11 +15,13 @@ public class EstructuraIfCompuesta {
         System.out.println("Introduzca el segundo sumando: ");
         numero2 = teclado.nextFloat();
         resultado = numero1 + numero2;
-        if (resultado > 5) {
-            System.out.println("Suma mayor a 5.");
+        if (resultado > VALOR) {
+            System.out.println("Suma mayor a "+VALOR);
 
-        } else if (resultado < 5) {
-            System.out.println("Suma menor a 5");
+        } else if (resultado < VALOR) {
+            System.out.println("Suma menor a "+VALOR);
+        } else{
+            System.out.println("La suma es "+VALOR);
         }
         System.out.printf("Valor de la suma : %.4f", resultado);
     }
