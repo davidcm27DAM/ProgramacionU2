@@ -6,17 +6,17 @@ public class ejercicio2 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        int edad1;
-        int edad2;
+        int miEdad;
+        int edadCompa;
 
         System.out.println("Introduce tu edad: ");
-        edad1 = teclado.nextInt();
+        miEdad = teclado.nextInt();
         System.out.println("Introduce la edad de tu compañero ");
-        edad2 = teclado.nextInt();
+        edadCompa = teclado.nextInt();
 
-        if (edad1 < edad2) {
+        if (miEdad < edadCompa) {
             System.out.println("Soy más joven que mi compañero. ");
-        } else if (edad1 > edad2) {
+        } else if (miEdad > edadCompa) {
             System.out.println("Mi compañero es más joven que yo ");
         } else {
             System.out.println("Somos de la misma edad ");

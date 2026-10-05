@@ -10,6 +10,7 @@ public class ejercicio4 {
         float tempAyer;
         boolean lluviaHoy;
         boolean lluviaAyer;
+        final int VALOR = 20;
 
         System.out.println("Introduce la temperatura de hoy: ");
         tempHoy = teclado.nextFloat();
@@ -20,11 +21,11 @@ public class ejercicio4 {
         System.out.println("Llovió ayer? Introduce \"true\" o \"false\" : ");
         lluviaAyer = teclado.nextBoolean();
 
-        if (tempHoy > 20 && lluviaHoy) {
+        if (tempHoy > VALOR && lluviaHoy) {
             System.out.printf("Hace calor pero está lloviendo. " +
-                    "\n Entre ayer y hoy la temperatura fue de: %.1f", (tempHoy - tempAyer));
+                    "\n Entre ayer y hoy la temperatura fue de: %.1f", (tempHoy + tempAyer));
             System.out.printf("\n Mañana habrá %.1f ºC. ", (tempHoy + 5));
-        } else if (tempHoy <= 20) {
+        } else if (tempHoy <= VALOR) {
             System.out.println("Parece que llega el otoño ");
             if (!lluviaHoy) {
                 System.out.println("pero luce el sol. ");

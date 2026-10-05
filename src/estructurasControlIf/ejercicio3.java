@@ -6,18 +6,20 @@ public class ejercicio3 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         float presionCaldera;
+        final byte LIMITE = 2;
         String nombre;
 
         System.out.println("Introduce la presión de la caldera");
         presionCaldera = teclado.nextFloat();
 
-        if (presionCaldera > 2) {
+        if (presionCaldera > LIMITE) {
             System.out.println("Abrir válvula de seguridad ");
             presionCaldera--;
             System.out.println("Ahora la presión es " + presionCaldera);
         } else {
             System.out.print("Introduce tu nombre: ");
-            nombre = teclado.next();
+            teclado.nextLine();
+            nombre = teclado.nextLine();
             System.out.println("Todo está bien " + nombre);
         }
     }
