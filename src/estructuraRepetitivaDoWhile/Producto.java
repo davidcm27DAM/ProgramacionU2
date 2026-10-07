@@ -26,7 +26,7 @@ public class Producto {
         System.out.println("2: El producto de los primeros " + LIMITE + " números naturales es: " + producto);
 
         // 3
-        contador = 1;
+        contador = 0;
         producto = 1;
         int[] numberList = {1, 2, 3, 4};
 
@@ -36,6 +36,18 @@ public class Producto {
         } while (contador < numberList.length);
 
         System.out.println("3: El producto de los primeros " + LIMITE + " números naturales es: " + producto);
+
+        // solución de clase
+
+        int multiplicando = 2;
+        producto = 1;
+
+        do{
+            producto = producto * multiplicando;
+            multiplicando++;
+        } while (multiplicando <= LIMITE);
+
+        System.out.println("Solución de clase: El producto de los primeros " + LIMITE + " números naturales es: " + producto);
 
     }
 
