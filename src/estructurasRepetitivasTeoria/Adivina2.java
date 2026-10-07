@@ -17,7 +17,8 @@ public class Adivina2 {
 
 
 /*
-public static void main(String[] args) {
+*
+* public static void main(String[] args) {
 		int suma=0,c=0;
 		do {
 			c=c+1;
