@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EjercicioForFactorial {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        final int VALOR_MINIMO = 1;
+        final int VALOR_MINIMO = 0;
         final int VALOR_MAXIMO = 7;
         int numero = 1;
         int factorial = 1;
@@ -13,13 +13,15 @@ public class EjercicioForFactorial {
         do {
             System.out.print("Introduzca un número positivo menor que siete: ");
             numero = sc.nextInt();
-            if (numero < VALOR_MINIMO || numero > VALOR_MAXIMO) {
+
+
+            if (!(numero > VALOR_MINIMO && numero < VALOR_MAXIMO)) {
                 System.out.println("El número introducido es incorrecto. ");
             }
 
-        } while (numero < VALOR_MINIMO || numero > VALOR_MAXIMO);
+        } while (!(numero > VALOR_MINIMO && numero < VALOR_MAXIMO) );
 
-        for (int contador = numero; contador > 0; contador--) {
+        for (int contador = numero; contador > 1; contador--) {
             factorial *= contador;
         }
 
