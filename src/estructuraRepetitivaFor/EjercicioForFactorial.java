@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EjercicioForFactorial {
     static void main() {
         Scanner sc = new Scanner(System.in);
-        int numero;
+        int numero = 1;
         int factorial = 1;
 
         do {
