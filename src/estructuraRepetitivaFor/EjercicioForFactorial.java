@@ -3,19 +3,21 @@ package estructuraRepetitivaFor;
 import java.util.Scanner;
 
 public class EjercicioForFactorial {
-    static void main() {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        final int VALOR_MINIMO = 1;
+        final int VALOR_MAXIMO = 7;
         int numero = 1;
         int factorial = 1;
 
         do {
             System.out.print("Introduzca un número positivo menor que siete: ");
             numero = sc.nextInt();
-            if (numero < 1 || numero > 7) {
+            if (numero < VALOR_MINIMO || numero > VALOR_MAXIMO) {
                 System.out.println("El número introducido es incorrecto. ");
             }
 
-        } while (numero < 1 || numero > 7);
+        } while (numero < VALOR_MINIMO || numero > VALOR_MAXIMO);
 
         for (int contador = numero; contador > 0; contador--) {
             factorial *= contador;
