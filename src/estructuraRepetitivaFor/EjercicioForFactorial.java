@@ -6,7 +6,7 @@ public class EjercicioForFactorial {
     static void main() {
         Scanner sc = new Scanner(System.in);
         int numero;
-        int factorial = 0;
+        int factorial = 1;
 
         do {
             System.out.print("Introduzca un número positivo menor que siete: ");
@@ -18,7 +18,7 @@ public class EjercicioForFactorial {
         } while (numero < 1 || numero > 7);
 
         for (int contador = numero; contador > 0; contador--) {
-            factorial += contador;
+            factorial *= contador;
         }
 
         System.out.println("El factorial de " + numero + " es: " + factorial);
