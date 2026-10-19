@@ -13,6 +13,7 @@ public class EjercicioUno {
         int sumaPares = 0;
         int sumaImpares = 0;
         int sumaCuadrados = 0;
+        int contadorWhile = 1;
 
         do {
             System.out.println("Introduce un número por teclado entre 1 y 20, inluidos: ");
@@ -30,11 +31,32 @@ public class EjercicioUno {
             } else {
                 sumaImpares += contador;
             }
-            sumaCuadrados += Math.pow(contador, 2);
-
+            sumaCuadrados += (int) Math.pow(contador, 2);
         }
 
-        System.out.println("Resultados: " +
+        System.out.println("Resultados con for: " +
+                "\nSuma de los " + numero + " primeros números naturales es: " + sumaNaturales +
+                "\nSuma de los números pares es: " + sumaPares +
+                "\nSuma de los números impares: " + sumaImpares +
+                "\nSuma de los cuadrados es: " + sumaCuadrados);
+
+        sumaNaturales = 0;
+        sumaPares = 0;
+        sumaImpares = 0;
+        sumaCuadrados = 0;
+
+        while (contadorWhile <= numero) {
+            sumaNaturales += contadorWhile;
+            if (contadorWhile % 2 == 0) {
+                sumaPares += contadorWhile;
+            } else {
+                sumaImpares += contadorWhile;
+            }
+            sumaCuadrados += (int) Math.pow(contadorWhile, 2);
+            contadorWhile++;
+        }
+
+        System.out.println("Resultados con while: " +
                 "\nSuma de los " + numero + " primeros números naturales es: " + sumaNaturales +
                 "\nSuma de los números pares es: " + sumaPares +
                 "\nSuma de los números impares: " + sumaImpares +
