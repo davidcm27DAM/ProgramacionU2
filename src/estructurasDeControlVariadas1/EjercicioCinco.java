@@ -3,7 +3,7 @@ package estructurasDeControlVariadas1;
 import java.util.Scanner;
 
 public class EjercicioCinco {
-    static void main() {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int posicion = 0;
 

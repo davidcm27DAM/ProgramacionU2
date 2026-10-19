@@ -2,8 +2,10 @@ package estructurasDeControlVariadas1;
 
 import java.util.Scanner;
 
+
+
 public class EjercicioCuatro {
-    static void main() {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double numeroTeclado = 0;
         int numeroNatural = 0;
