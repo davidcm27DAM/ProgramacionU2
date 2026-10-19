@@ -15,19 +15,24 @@ public class EjercicioCuatro {
         if (numeroTeclado >= 1 && numeroTeclado == Math.floor(numeroTeclado)) {
             numeroNatural = (int) numeroTeclado;
             System.out.println(1 + " es divisor de " + numeroNatural);
-            for (int i = 2; i < numeroNatural; i++) {
-                if (numeroNatural % i == 0) {
-                    System.out.println(i + " es divisor de " + numeroNatural);
-                    primo = false;
-
-                }
-            }
-            System.out.println(numeroNatural + " es divisor de " + numeroNatural);
-            if (!primo) {
-                System.out.println(numeroNatural + " no es un número primo");
+            if (numeroNatural == 1) {
+                System.out.println("1 no es primo.");
             } else {
-                System.out.println(numeroNatural + " es un número primo!");
+                for (int i = 2; i < numeroNatural; i++) {
+                    if (numeroNatural % i == 0) {
+                        System.out.println(i + " es divisor de " + numeroNatural);
+                        primo = false;
+                    }
+                }
+                System.out.println(numeroNatural + " es divisor de " + numeroNatural);
+                if (!primo) {
+                    System.out.println(numeroNatural + " no es un número primo");
+                } else {
+                    System.out.println(numeroNatural + " es un número primo!");
+                }
+
             }
+
         } else {
             System.out.println("El número introducido no es un número natural. ");
         }

@@ -38,4 +38,7 @@ public class EjercicioCinco {
     switch, visualiza el medallero (medalla de oro (primer
     puesto), plata (segundo puesto), bronce (tercer puesto),
     gracias por participar (cualquier otro puesto)
+
+    Enunciado añadido:
+    Si
  */

@@ -7,9 +7,7 @@ public class EjercicioTres {
         Scanner sc = new Scanner(System.in);
         int numeroMes = 0;
         int numeroAnyo = 0;
-
-        System.out.println("Introduce el número del año: ");
-        numeroAnyo = sc.nextInt();
+        int numDias = 0;
 
         do {
             System.out.println("Introduce el número del mes (1 al 12): ");
@@ -23,31 +21,39 @@ public class EjercicioTres {
         System.out.println("// Utilizando un switch");
         switch (numeroMes) {
             case 2:
+                System.out.println("Introduce el número del año: ");
+                numeroAnyo = sc.nextInt();
                 if ((numeroAnyo % 4 == 0 && !(numeroAnyo % 100 == 0)) || numeroAnyo % 400 == 0) {
-                    System.out.println("En febrero de " + numeroAnyo + " constan 29 días, ya que *es bisiesto*");
+                    numDias = 29;
                 } else {
-                    System.out.println("En febrero de " + numeroAnyo + " constan 28 días, ya que *no es bisiesto*");
+                    numDias = 28;
                 }
                 break;
             case 4, 6, 9, 11:
-                System.out.println("El mes " + numeroMes + " del año " + numeroAnyo + " consta de 30 días. ");
+                numDias = 30;
                 break;
             default:
-                System.out.println("El mes " + numeroMes + " del año " + numeroAnyo + " consta de 31 días. ");
+                numDias = 31;
+
         }
+        System.out.println("El mes tiene " + numDias + " días. ");
 
         System.out.println("// Utilizando un if");
         if (numeroMes == 2) {
+            System.out.println("Introduce el número del año: ");
+            numeroAnyo = sc.nextInt();
             if ((numeroAnyo % 4 == 0 && !(numeroAnyo % 100 == 0)) || numeroAnyo % 400 == 0) {
-                System.out.println("En febrero de " + numeroAnyo + " constan 29 días, ya que *es bisiesto*");
+                numDias = 29;
             } else {
-                System.out.println("En febrero de " + numeroAnyo + " constan 28 días, ya que *no es bisiesto*");
+                numDias = 28;
             }
         } else if (numeroMes == 4 || numeroMes == 6 || numeroMes == 9 || numeroMes == 11) {
-            System.out.println("El mes " + numeroMes + " del año " + numeroAnyo + " consta de 30 días. ");
+            numDias = 30;
         } else {
-            System.out.println("El mes " + numeroMes + " del año " + numeroAnyo + " consta de 31 días. ");
+            numDias = 31;
         }
+        System.out.println("El mes tiene " + numDias + " días. ");
+
     }
 }
 
