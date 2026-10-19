@@ -1,7 +1,30 @@
 package estructurasDeControlVariadas1;
 
+import java.util.Scanner;
+
 public class EjercicioCinco {
     static void main() {
+        Scanner sc = new Scanner(System.in);
+        int posicion = 0;
+
+        System.out.println("Introduce tu posición final: ");
+        posicion = sc.nextInt();
+
+        switch (posicion){
+            case 1:
+                System.out.println("Medalla de oro! ");
+                break;
+            case 2:
+                System.out.println("Medalla de plata! ");
+                break;
+            case 3:
+                System.out.println("Medalla de bronce! ");
+                break;
+            default:
+                System.out.println("Gracias por participar. ");
+
+        }
+
 
     }
 }
