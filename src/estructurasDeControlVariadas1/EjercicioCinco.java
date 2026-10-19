@@ -10,7 +10,7 @@ public class EjercicioCinco {
         System.out.println("Introduce tu posición final: ");
         posicion = sc.nextInt();
 
-        switch (posicion){
+        switch (posicion) {
             case 1:
                 System.out.println("Medalla de oro! ");
                 break;
