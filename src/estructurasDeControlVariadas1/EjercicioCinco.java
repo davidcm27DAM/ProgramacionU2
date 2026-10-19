@@ -1,6 +1,9 @@
 package estructurasDeControlVariadas1;
 
 public class EjercicioCinco {
+    static void main() {
+
+    }
 }
 
 
