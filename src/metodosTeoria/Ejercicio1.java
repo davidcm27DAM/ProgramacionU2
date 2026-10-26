@@ -22,7 +22,6 @@ public class Ejercicio1 {
 
     }
 
-
     public static int leerNumero() {
         System.out.print("Introduce un número: ");
         return sc.nextInt();
