@@ -3,43 +3,42 @@ package ejerciciosMetodosParte1;
 import java.util.Scanner;
 
 public class Ejercicio2 {
-
     private static Scanner sc = new Scanner(System.in);
     static final double IVA = 0.21;
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         run();
     }
 
-    public static void run(){
+    public static void run() {
         double precio = introducirPrecioProducto();
         imprimirResultados(precio, calcularPrecioIva(precio));
     }
 
-    public static double introducirPrecioProducto(){
+    public static double introducirPrecioProducto() {
         double cantidad = 0.0;
 
-        System.out.println("Introduce el precio del producto");
-        cantidad = sc.nextDouble();
-
-        while (!sc.hasNextDouble()){
+        System.out.println("Introduce el precio del producto ");
+        while (!sc.hasNextDouble()) {
             System.out.println("Error en la introducción del valor. Vuelva a introducir el precio.");
-            cantidad = sc.nextDouble();
+            sc.nextLine();
         }
+        cantidad = sc.nextDouble();
+        sc.nextLine();
 
-
-        //cuerpo del método
         return cantidad;
     }
 
-    public static double calcularPrecioIva(double precio){
-        double precioConIva = precio+(precio*IVA);
+    public static double calcularPrecioIva(double precio) {
+        double precioConIva = precio + (precio * IVA);
         return precioConIva;
     }
 
-    public static void imprimirResultados(double precio, double precioConIva){
-        // cuerpo del método
+    public static void imprimirResultados(double precio, double precioConIva) {
+        System.out.printf("Precio sin IVA: %.2f euros%n", precio);
+        System.out.printf("Precio con IVA (%.0f%%): %.2f euros%n", IVA * 100, precioConIva);
     }
+
 }
 
 

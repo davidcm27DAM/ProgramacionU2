@@ -5,38 +5,39 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
     public static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
         empezar();
     }
 
     public static void empezar() {
-
+        /*
         double cateto1 = introducirCateto();
         double cateto2 = introducirCateto();
         double hipotenusa = calcularHipotenusa(cateto1, cateto2);
         visualizarResultado(hipotenusa);
+         */
 
+        //Alternativa en una línea:
         visualizarResultado(calcularHipotenusa(introducirCateto(), introducirCateto()));
-
     }
 
     public static double introducirCateto() {
         double cateto = 0;
-        System.out.println("Introduce el valor del cateto");
-        cateto = sc.nextDouble();
+        System.out.println("Introduce el valor del cateto ");
 
-        while (!sc.hasNextDouble()) {
-            System.out.println("Valor introducido incorrecto. Vuelva a intentarlo");
-            cateto = sc.nextDouble();
+        while (!sc.hasNextDouble()){
+            System.out.println("Error en la introducción del valor. ");
+            sc.nextLine();
         }
+
+        cateto = sc.nextDouble();
+        sc.nextLine();
 
         return cateto;
     }
 
     public static double calcularHipotenusa(double cateto1, double cateto2) {
-        double hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
-        return hipotenusa;
+        return Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
     }
 
     public static void visualizarResultado(double hipotenusa){
