@@ -1,10 +1,54 @@
 package ejerciciosMetodosParte2;
 
+import java.util.Scanner;
+
 public class Ejercicio1 {
+    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
+        run();
 
+    }
+
+    public static void run() {
+
+        int posicion = introducirPosicion();
+        int valor = calcularNumero(posicion);
+
+    }
+
+    public static int introducirPosicion() {
+
+        System.out.print("Introduce el valor de la posición de la serie de Fibonacci: ");
+        while (!sc.hasNextInt()) {
+            System.out.println("Error en el tipo de valor");
+            sc.next();
+        }
+
+        return sc.nextInt();
+    }
+
+    public static int calcularNumero(int posicion) {
+        /*
+        int numero = 0;
+        int contador = 1;
+        int valorA = 1;
+        int valorB = 1;
+        while (contador < posicion){
+            contador++;
+            valorA += valorB;
+            numero = ;
+
+        }
+
+        */
+        return 2;
+
+    }
+
+    public static void visualizarNumero(int posicion, int valor) {
+        System.out.println("Para la posición " + posicion + " el valor es: " + valor);
     }
 
 }
