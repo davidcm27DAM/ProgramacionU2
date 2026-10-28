@@ -4,23 +4,23 @@ public class Ejercicio3 {
 }
 
 
+
 /*
-2. Hacer un programa que nos permita introducir una serie de números positivos
-de cuatro dígitos (validar por programa) hasta teclear el cero. Por cada número
-introducido determinar si todos los dígitos del número son pares o hay dígitos
-impares (el resto de dividir un número entre 10 nos saca las unidades o el dígito
-situado más a la derecha de ese número).
-Ejemplos:
-El número 7286 tiene dígitos impares .
-El número 8424 tiene todos los dígitos pares.
+3. Crear un programa que nos convierta un número positivo (incluido el cero) en
+base decimal a binario.
+Para convertir un número decimal a binario debemos dividir entre 2 el número, el
+resultado de esa división se divide entre 2 de nuevo y así sucesivamente, hasta
+que no se pueda dividir más. El resto que obtengamos de cada división tomado
+en orden inverso a como lo fuimos obteniendo (de abajo- arriba) formará el
+número binario.
 Usaremos los siguientes métodos:
-a) leerEntero: se encarga de introducir un número por teclado.
-b) comprobarNumero: Controlará que el número esté correctamente
-introducido (validar por programa que es de cuatro dígitos).
-c) determinarParImpar: Determinará si todos los dígitos del número son
-pares o no.
-d) visualizarResultado: Por cada número sacará por pantalla si los dígitos
-son pares o hay dígitos impares.
-d) run: controlará que el programa termine cuando introduzcamos el cero y
-llamará a los métodos correspondientes.
+a) meterNumero: Nos permite meter el número decimal. Se lo debe
+devolver al main.
+b) convertirDecimal: Devolverá al main un String con el número convertido
+a binario.
+c) imprimir: imprime el resultado.
+El método main debe invocar a los métodos especificados anteriormente
+
+Ejm:
+Si introducimos un 8 nos deberá devolver 1000
  */
