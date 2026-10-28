@@ -6,45 +6,53 @@ public class Ejercicio1 {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         run();
-
     }
 
     public static void run() {
-
         int posicion = introducirPosicion();
         int valor = calcularNumero(posicion);
-
+        visualizarNumero(posicion, valor);
     }
 
     public static int introducirPosicion() {
+        int numero = 0;
 
-        System.out.print("Introduce el valor de la posición de la serie de Fibonacci: ");
-        while (!sc.hasNextInt()) {
-            System.out.println("Error en el tipo de valor");
-            sc.next();
-        }
+        do{
+            System.out.print("Introduce el valor de la posición de la serie de Fibonacci: ");
+            if (sc.hasNextInt()){
+                numero = sc.nextInt();
+                if (numero <= 0){
+                    System.out.println("La posición ha de ser mayor a 0! ");
+                }
 
-        return sc.nextInt();
+            } else {
+                System.out.println("Error en el tipo de valor");
+                sc.next();
+            }
+        } while (numero <= 0);
+
+        return numero;
+
     }
 
     public static int calcularNumero(int posicion) {
-        /*
         int numero = 0;
-        int contador = 1;
         int valorA = 1;
-        int valorB = 1;
-        while (contador < posicion){
-            contador++;
-            valorA += valorB;
-            numero = ;
+        int valorB = 0;
 
+        if (posicion == 1) {
+            return 0;
+        } else if (posicion == 2) {
+            return 1;
+        } else {
+            for (int i = 3; i <= posicion; i++){
+                numero = valorA + valorB;
+                valorB = valorA;
+                valorA = numero;
+            }
         }
-
-        */
-        return 2;
-
+        return numero;
     }
 
     public static void visualizarNumero(int posicion, int valor) {
