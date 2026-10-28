@@ -18,11 +18,11 @@ public class Ejercicio1 {
     public static int introducirPosicion() {
         int numero = 0;
 
-        do{
+        do {
             System.out.print("Introduce el valor de la posición de la serie de Fibonacci: ");
-            if (sc.hasNextInt()){
+            if (sc.hasNextInt()) {
                 numero = sc.nextInt();
-                if (numero <= 0){
+                if (numero <= 0) {
                     System.out.println("La posición ha de ser mayor a 0! ");
                 }
 
@@ -37,22 +37,24 @@ public class Ejercicio1 {
     }
 
     public static int calcularNumero(int posicion) {
-        int numero = 0;
-        int valorA = 1;
-        int valorB = 0;
-
         if (posicion == 1) {
             return 0;
         } else if (posicion == 2) {
             return 1;
         } else {
-            for (int i = 3; i <= posicion; i++){
+            int numero = 0;
+            int valorA = 1;
+            int valorB = 0;
+            for (int i = 3; i <= posicion; i++) {
                 numero = valorA + valorB;
+                if (i == posicion){
+                    return numero;
+                }
                 valorB = valorA;
                 valorA = numero;
             }
+            return numero;
         }
-        return numero;
     }
 
     public static void visualizarNumero(int posicion, int valor) {
