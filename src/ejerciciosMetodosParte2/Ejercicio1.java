@@ -47,11 +47,10 @@ public class Ejercicio1 {
             int valorB = 0;
             for (int i = 3; i <= posicion; i++) {
                 numero = valorA + valorB;
-                if (i == posicion){
-                    return numero;
+                if (i != posicion) {
+                    valorB = valorA;
+                    valorA = numero;
                 }
-                valorB = valorA;
-                valorA = numero;
             }
             return numero;
         }
