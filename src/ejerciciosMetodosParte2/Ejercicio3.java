@@ -10,8 +10,6 @@ public class Ejercicio3 {
         int numero = meterNumero();
         String stringNumero = convertirDecimal(numero);
         imprimir(numero, stringNumero);
-
-
     }
 
     public static int meterNumero() {
@@ -78,6 +76,8 @@ public class Ejercicio3 {
             numero /= 2;
         } while (numero > 0);
         */
+        // Solución método Integer:
+        //String texto = Integer.toBinaryString(numero);
 
         return builderBinario.reverse().toString();
     }
