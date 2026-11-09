@@ -4,14 +4,25 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
     public static Scanner sc = new Scanner(System.in);
+    private static int limiteInferior = 1000;
+    private static int limiteSuperior = 9999;
 
     public static void main(String[] args) {
         run();
     }
 
     public static void run() {
-        int numero = leerEntero();
-        visualizarResultado(numero, determinarParImpar(numero));
+        int numero = -1;
+
+        do {
+            numero = leerEntero();
+            if (numero != 0) {
+                visualizarResultado(numero, determinarParImpar(numero));
+            } else {
+                System.out.println("Cerrando el programa");
+            }
+        } while (numero != 0);
+
     }
 
     public static int leerEntero() {
@@ -19,7 +30,7 @@ public class Ejercicio2 {
         boolean esCorrecto = false;
 
         do {
-            System.out.println("Introduce un número de cuatro dígitos: ");
+            System.out.println("Introduce un número de cuatro dígitos, o 0 para salir: ");
             if (sc.hasNextInt()) {
                 numero = sc.nextInt();
                 esCorrecto = comprobarNumero(numero);
@@ -34,7 +45,9 @@ public class Ejercicio2 {
     }
 
     public static boolean comprobarNumero(int numero) {
-        if (numero<1000 || numero > 9999) {
+        if (numero == 0) {
+            return true;
+        } else if (numero < limiteInferior || numero > limiteSuperior) {
             System.out.println("El número introducido es incorrecto. ");
             return false;
         } else {
@@ -45,24 +58,22 @@ public class Ejercicio2 {
     public static boolean determinarParImpar(int numero) {
         boolean esPar = true;
 
-        while (esPar && numero > 0){
-            if (numero % 2 != 0){
+        while (esPar && numero > 0) {
+            if (numero % 2 != 0) {
                 esPar = false;
-            } else{
+            } else {
                 numero /= 10;
             }
         }
-
         return esPar;
     }
 
     public static void visualizarResultado(int numero, boolean esPar) {
-        if (esPar){
-            System.out.println("El número "+ numero + " tiene todos los dígitos pares ");
-        }else {
-            System.out.println("El número "+ numero + " tiene dígitos impares ");
+        if (esPar) {
+            System.out.println("El número " + numero + " tiene todos los dígitos pares ");
+        } else {
+            System.out.println("El número " + numero + " tiene dígitos impares ");
         }
-
     }
 }
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio3 {
     public static Scanner sc = new Scanner(System.in);
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
         int numero = meterNumero();
         String stringNumero = convertirDecimal(numero);
@@ -38,11 +38,10 @@ public class Ejercicio3 {
         return numero;
     }
 
+
     public static String convertirDecimal(int numero) {
         StringBuilder builderBinario = new StringBuilder();
-        String stringBinario = "";
 
-        /*
         if (numero == 0) {
             builderBinario.append("0");
         } else {
@@ -57,7 +56,7 @@ public class Ejercicio3 {
                     }
                     numero = numero / 2 + numero % 2;
                 }
-            } else{
+            } else {
                 builderBinario.append("0");
                 numero = numero / 2;
                 while (numero > 1) {
@@ -69,18 +68,18 @@ public class Ejercicio3 {
                     numero = numero / 2;
                 }
                 builderBinario.append("1");
-
             }
         }
-        */
+
+        // Solución simplificada:
+        /*
         do {
             builderBinario.append(numero % 2);
             numero /= 2;
         } while (numero > 0);
+        */
 
-        stringBinario = builderBinario.reverse().toString();
-        return stringBinario;
-
+        return builderBinario.reverse().toString();
     }
 
 
