@@ -1,6 +1,92 @@
 package ejerciciosMetodosParte2;
 
+import java.util.Scanner;
+
 public class Ejercicio3 {
+    public static Scanner sc = new Scanner(System.in);
+
+    static void main(String[] args) {
+
+        int numero = meterNumero();
+        String stringNumero = convertirDecimal(numero);
+        imprimir(numero, stringNumero);
+
+
+    }
+
+    public static int meterNumero() {
+        int numero = -1;
+        System.out.println("Introduce un número positivo (incluido el cero) por teclado: ");
+
+        do {
+            if (sc.hasNextInt()) {
+                numero = sc.nextInt();
+                if (numero < 0) {
+                    System.out.println("Has introducido un número menor que cero \n" +
+                            "Has de introducir un número igual o mayor a 0. ");
+                    sc.next();
+                }
+
+            } else {
+                System.out.println("Error en la introducción de dato. \n" +
+                        "Has de entroducir un número igual o mayor a 0. ");
+                sc.next();
+            }
+
+        } while (numero < 0);
+
+        return numero;
+    }
+
+    public static String convertirDecimal(int numero) {
+        StringBuilder builderBinario = new StringBuilder();
+        String stringBinario = "";
+
+        /*
+        if (numero == 0) {
+            builderBinario.append("0");
+        } else {
+            if (numero % 2 != 0) {
+                builderBinario.append("1");
+                numero = numero / 2 + numero % 2;
+                while (numero > 1) {
+                    if (numero % 2 == 0) {
+                        builderBinario.append("1");
+                    } else {
+                        builderBinario.append("0");
+                    }
+                    numero = numero / 2 + numero % 2;
+                }
+            } else{
+                builderBinario.append("0");
+                numero = numero / 2;
+                while (numero > 1) {
+                    if (numero % 2 == 0) {
+                        builderBinario.append("0");
+                    } else {
+                        builderBinario.append("1");
+                    }
+                    numero = numero / 2;
+                }
+                builderBinario.append("1");
+
+            }
+        }
+        */
+        do {
+            builderBinario.append(numero % 2);
+            numero /= 2;
+        } while (numero > 0);
+
+        stringBinario = builderBinario.reverse().toString();
+        return stringBinario;
+
+    }
+
+
+    public static void imprimir(int numero, String numeroBinario) {
+        System.out.println("El número " + numero + " de base decimal se traduce a base binaria como: \n" + numeroBinario);
+    }
 }
 
 
